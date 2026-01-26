@@ -35,19 +35,7 @@ return{
 		},
 	},
 
-
-    -- colorscheme --
-	'ribru17/bamboo.nvim',
-	lazy = false,
-    priority = 1000,
-	config = function()
-		require('bamboo').setup {
-			-- optional configuration here
-			transparent = true,
-		}
-		require('bamboo').load()
-	end,
-
+    -- autopairs --
     'windwp/nvim-autopairs',
     name = 'nvim-autopairs',
     event = 'InsertEnter',
@@ -57,6 +45,17 @@ return{
         })
     end,
 
+    -- colorscheme --
+	'ribru17/bamboo.nvim',
+	lazy = false,
+	priority = 1000,
+	config = function()
+		require('bamboo').setup {
+			-- optional configuration here
+			transparent = true,
+		}
+		require('bamboo').load()
+	end,
 
     -- treesitter --
 	'nvim-treesitter/nvim-treesitter',
@@ -68,7 +67,6 @@ return{
     dependencies = {'nvim-lua/plenary.nvim', 'nvim-telescope/telescope.nvim'},
     config = function()
         require('harpoon'):setup()
-
     end,
 
     -- misc plugins --
@@ -80,5 +78,11 @@ return{
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-cmdline',
+
+
+    "folke/flash.nvim",
+    event = "VeryLazy",
+    opts = {},
+
 }
 
