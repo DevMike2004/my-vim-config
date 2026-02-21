@@ -47,4 +47,4 @@ vim.lsp.config('lua_ls', {
 })
 
 -- After defining all configs, you need to enable the desired servers:
-vim.lsp.enable({'lua_ls', 'ts_ls', 'html', 'cssls'})
+vim.lsp.enable({'lua_ls', 'ts_ls', 'html', 'cssls', 'clangd', 'jdtls'})

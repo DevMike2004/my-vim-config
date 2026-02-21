@@ -25,6 +25,11 @@ return {
 			'tailwindcss',
 			'lua_ls',
 			'eslint',
+      'clangd',
+      'codelldb',
+      'clang-tidy',
+      'clang-format',
+      'jdtls',
 		},
 	},
 }
